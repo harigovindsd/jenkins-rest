@@ -300,7 +300,7 @@ public interface JobsApi {
     @Fallback(Fallbacks.NullOnNotFoundOr404.class)
     @Consumes(MediaType.APPLICATION_JSON)
     @GET
-    JsonObject testReport(@Nullable @PathParam("optionalFolderPath") @ParamParser(OptionalFolderPathParser.class) String optionalFolderPath,
+    TestReport testReport(@Nullable @PathParam("optionalFolderPath") @ParamParser(OptionalFolderPathParser.class) String optionalFolderPath,
         @PathParam("name") String jobName,
         @PathParam("number") int buildNumber);
 
